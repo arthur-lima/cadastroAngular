@@ -10,11 +10,9 @@ import { Produto } from '../intertaces/produto';
 export class ProdutosComponent implements OnInit {
 
   listagemProdutos: Array<Produto>;
-  produto: Produto;
+  produto: Produto = <Produto>{};
 
-  constructor(private produtoService: ProdutoService) {
-   
-  }
+  constructor(private produtoService: ProdutoService) { }
 
   ngOnInit() {
     this.listar();
@@ -28,7 +26,6 @@ export class ProdutosComponent implements OnInit {
     //TODO: verificar se o objeto esta null
     this.produtoService.salvar(this.produto).subscribe(data => {
       this.listar();
-      console.log(data);
     });
   }
 
