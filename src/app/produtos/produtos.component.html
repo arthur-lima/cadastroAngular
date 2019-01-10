@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Cadastro de Produtos</h1>
+  <form #f="ngForm" (ngSubmit)="salvar()">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" id="nome" [(ngModel)]="produto.nome" required>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-success" >Salvar</button>
+
+  </form>
+</div>
+
+<hr />
+<div class="container-fluid">
+  <h2>Listagem</h2>
+
+  <ul>
+    <li *ngFor="let p of listagemProdutos">
+      {{p.nome}} -  {{p.descricao}}
+    </li>
+  </ul>
+</div>
