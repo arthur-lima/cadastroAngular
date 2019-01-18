@@ -1,0 +1,21 @@
+<br />
+<div class="container mt-3">
+  <div>
+    <div>
+      <button type="button" class="btn btn-success" routerLink="/produtos/criar">Novo Produto</button>
+    </div>
+    <div>
+      <h1>Listagem de Produtos</h1>
+    </div>
+
+    <ul>
+      <li *ngFor="let p of listagemProdutos">
+        {{ p.nome }} - {{ p.preco_venda }}
+        <!-- Criar edição e exclusão
+         <button type="button" class="btn btn-primary btn-sm ml-1" routerLink="/produtos/editar/p.id">Editar</button> 
+        <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deletar()">X</button> 
+        -->
+      </li>
+    </ul>
+  </div>
+</div>
